@@ -4,18 +4,24 @@
     {
         static void Main(string[] args)
         {
+            //Check if the first element or the last element of the two arrays ( length 1 or more) are equal.
+            int[] nums1 = { 1, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 9, 5 };
+
+            int[] nums2 = { 5, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 5 };
+            Console.WriteLine(nums1[0].Equals(nums2[0]) || (nums1[nums1.Length - 1].Equals(nums2[nums2.Length - 1])) || (nums1.Length>=1 && nums2.Length>=1));
+            Console.ReadKey();
 
 
+            //Checks if the first element and the last element of an array of integers are equal. The array length is greater than 1.
+            //int[] nums = { 1, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 9 , 1};
+            //Console.WriteLine((nums.Length >= 1) && (nums[0].Equals(nums[nums.Length - 1])));
 
 
-
-
-
-
-
-
-
-
+            //Count the repeated number in given array
+            //Console.WriteLine("Input Integer");
+            //int x = Convert.ToInt32(Console.ReadLine());
+            //int[] nums = { 1, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 9 };
+            //Console.WriteLine(nums.Count(n => n == x));
 
 
 
