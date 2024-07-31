@@ -2,14 +2,66 @@
 {
     class Program
     {
+        static void PrintMinimumValue(int[] arr)
+        {
+            int min = arr[0];
+            for (int i = 1; i < arr.Length; i++)
+            {
+                if (min > arr[i])
+                {
+                    min = arr[i];
+                }
+            }
+            Console.WriteLine("Minimum Value:"+ min);
+        }
+        static void PrintArray(int[] arr)
+        {
+            Console.WriteLine("Printing the Given Array");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
+        static bool StringPalindrome(string str)
+        {
+            char[] C = str.ToCharArray();
+            Array.Reverse(C);
+            return new string(C).Equals(str);
+        }
+        static bool ChkArray(int[]arr,int n)
+        {
+            return arr.Contains(n);
+        }
         static void Main(string[] args)
         {
-            //Check if the first element or the last element of the two arrays ( length 1 or more) are equal.
-            int[] nums1 = { 1, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 9, 5 };
+            int[] nums = { 1, 3, 5, 7, 9 };
+            int x = 6;
+            Console.WriteLine(ChkArray(nums, x));
 
-            int[] nums2 = { 5, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 5 };
-            Console.WriteLine(nums1[0].Equals(nums2[0]) || (nums1[nums1.Length - 1].Equals(nums2[nums2.Length - 1])) || (nums1.Length>=1 && nums2.Length>=1));
-            Console.ReadKey();
+
+
+
+            //Console.WriteLine(StringPalindrome("vvvv"));
+
+
+
+            //Array Printing
+            //int[] arr1 = { 25, 10, 20, 15, 40, 50 };
+            //int[] arr2 = { 12, 23, 44, 11, 54 };
+
+            //PrintMinimumValue(arr1);
+            //PrintMinimumValue(arr2);
+            //PrintArray(arr1);
+            //PrintArray(arr2);
+
+
+
+            //Check if the first element or the last element of the two arrays ( length 1 or more) are equal.
+            //int[] nums1 = { 1, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 9, 5 };
+
+            //int[] nums2 = { 5, 2, 2, 3, 3, 4, 5, 6, 5, 7, 7, 7, 8, 8, 5 };
+            //Console.WriteLine(nums1[0].Equals(nums2[0]) || (nums1[nums1.Length - 1].Equals(nums2[nums2.Length - 1])) && (nums1.Length>=1 && nums2.Length>=1));
+            //Console.ReadKey();
 
 
             //Checks if the first element and the last element of an array of integers are equal. The array length is greater than 1.
