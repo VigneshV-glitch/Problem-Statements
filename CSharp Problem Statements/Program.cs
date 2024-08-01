@@ -2,6 +2,10 @@
 {
     class Program
     {
+        public static int Inline(int x, int y)
+        {
+            return x == y ? (x + y) * 3 : x + y;
+        }
         static void PrintMinimumValue(int[] arr)
         {
             int min = arr[0];
@@ -32,11 +36,30 @@
         {
             return arr.Contains(n);
         }
+        static string ChkPath (string Filename)
+        {
+            return Path.GetFileName(Filename);
+        }
+        static string ChkPath2(string Filename)
+        {
+            return Filename.Split('/').Last();
+        }
         static void Main(string[] args)
         {
-            int[] nums = { 1, 3, 5, 7, 9 };
-            int x = 6;
-            Console.WriteLine(ChkArray(nums, x));
+
+
+
+
+            string file_path;
+            file_path = "c:/csharp/ex/test.cpp";
+            Console.WriteLine(ChkPath(file_path));
+
+
+
+
+            //int[] nums = { 1, 3, 5, 7, 9 };
+            //int x = 6;
+            //Console.WriteLine(ChkArray(nums, x));
 
 
 
@@ -166,12 +189,6 @@
             //        Console.WriteLine(i);
             //    }
             //}
-
-
         }
-        //public static int Inline(int x, int y)
-        //{
-        //    return x == y ? (x + y) * 3 : x + y;
-        //}
     }
 }
