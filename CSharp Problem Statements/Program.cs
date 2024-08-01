@@ -46,13 +46,24 @@
         }
         static void Main(string[] args)
         {
+           
+            //finding the Largest and Lowest Integer using Math Function
+            //Console.WriteLine("Enter the first Integer");
+            //int x = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter the Second Integer");
+            //int y = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Enter the Thrid Integer");
+            //int z = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine("\tLargest Integer:" + Math.Max(x, Math.Max(y, z)));
+            //Console.WriteLine("\tLowest Integer:" + Math.Min(x, Math.Min(y, z)));
 
 
 
 
-            string file_path;
-            file_path = "c:/csharp/ex/test.cpp";
-            Console.WriteLine(ChkPath(file_path));
+            //string file_path;
+            //file_path = "c:/csharp/ex/test.cpp";
+            //Console.WriteLine(ChkPath(file_path));
 
 
 
