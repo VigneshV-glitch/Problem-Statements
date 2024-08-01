@@ -46,6 +46,33 @@
         }
         static void Main(string[] args)
         {
+            string firstName, middleName, lastName, name;
+
+            Console.Write("Enter your first name: ");
+            firstName = Convert.ToString(Console.ReadLine());
+      
+            Console.Write("Enter your middle name or initial: ");
+            middleName = Convert.ToString(Console.ReadLine());
+
+            Console.Write("Enter Your Last name:");
+            lastName = Convert.ToString(Console.ReadLine());
+      
+            Console.WriteLine();
+            Console.WriteLine("You entered '{0}', '{1}', and '{2}'.", 
+                        firstName, middleName, lastName);
+      
+            name = ((firstName.Trim() + " " + middleName.Trim()).Trim() + " " + lastName.Trim()).Trim();
+
+            Console.WriteLine("The result is " + name + ".");
+
+
+
+
+
+
+
+
+
            
             //finding the Largest and Lowest Integer using Math Function
             //Console.WriteLine("Enter the first Integer");
