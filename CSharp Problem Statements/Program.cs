@@ -44,36 +44,121 @@
         {
             return Filename.Split('/').Last();
         }
+        static string removStringElements(string str)
+        {
+            return str.Length > 2 ? str.Substring(1, str.Length - 2) : str;
+        }
+        static bool Array_Average_Value_WholeNumber_or_not(int[] arr)
+        {
+            return arr.Average() % 1 == 0;
+        }
+        static string OrderBy (string str)
+        {
+            return new string (str.OrderBy(x => x).ToArray());
+        }
+        static string String_Length_Odd_or_Even (string word)
+        {
+            int length = word.Length;
+
+            if(length % 2 == 0)
+            {
+                return "Even Length";
+            }
+            else
+            {
+                return "Odd Length";
+            }
+        }
+        static bool EndsWith (string str)
+        {
+            return str.EndsWith("s");
+        }
+        static int Sum_of_Squares_in_Array(int[] arr)
+        {
+            return arr.Sum(x => x * x);
+        }
         static void Main(string[] args)
         {
-            string firstName, middleName, lastName, name;
-
-            Console.Write("Enter your first name: ");
-            firstName = Convert.ToString(Console.ReadLine());
-      
-            Console.Write("Enter your middle name or initial: ");
-            middleName = Convert.ToString(Console.ReadLine());
-
-            Console.Write("Enter Your Last name:");
-            lastName = Convert.ToString(Console.ReadLine());
-      
-            Console.WriteLine();
-            Console.WriteLine("You entered '{0}', '{1}', and '{2}'.", 
-                        firstName, middleName, lastName);
-      
-            name = ((firstName.Trim() + " " + middleName.Trim()).Trim() + " " + lastName.Trim()).Trim();
-
-            Console.WriteLine("The result is " + name + ".");
 
 
 
 
+            //int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            //Console.WriteLine(Sum_of_Squares_in_Array(nums));
+
+
+            //Console.WriteLine(EndsWith("Books"));
+
+
+
+            //Console.WriteLine(String_Length_Odd_or_Even("JavaScript"));
+            
+            
+            
+            
+            //Console.WriteLine(OrderBy("PHP"));
+
+
+
+
+            //Check the average value of the elements of a given array of numbers is a whole number or not
+            //int[] nums = { 1, 2, 3, 5, 4, 2, 3, 4 };
+            //Console.WriteLine(Array_Average_Value_WholeNumber_or_not(nums));
 
 
 
 
 
-           
+            //Elements Removing from The given String
+            //Console.WriteLine("After Removing First and Last Elements:" + removStringElements("Problem"));
+
+
+
+
+
+            //string s1 = "The quick brown fox jumps over the lazy dog";
+            //string s2 = "fox";
+            //bool b = s1.Contains(s2);
+
+            //if (b)
+            //{
+            //    Console.WriteLine("\"'{0}' is in the string '{1}': {2}", s2, s1, b);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not in the String");
+            //}
+
+
+
+            //string firstName, middleName, lastName, name;
+
+            //Console.Write("Enter your first name: ");
+            //firstName = Convert.ToString(Co)nsole.ReadLine());
+
+            //Console.Write("Enter your middle name or initial: ");
+            //middleName = Convert.ToString(Console.ReadLine());
+
+            //Console.Write("Enter Your Last name:");
+            //lastName = Convert.ToString(Console.ReadLine());
+
+            //Console.WriteLine();
+            //Console.WriteLine("You entered '{0}', '{1}', and '{2}'.", 
+            //            firstName, middleName, lastName);
+
+            //name = ((firstName.Trim() + " " + middleName.Trim()).Trim() + " " + lastName.Trim()).Trim();
+
+            //Console.WriteLine("The result is " + name + ".");
+
+
+
+
+
+
+
+
+
+
             //finding the Largest and Lowest Integer using Math Function
             //Console.WriteLine("Enter the first Integer");
             //int x = Convert.ToInt32(Console.ReadLine());
