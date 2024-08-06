@@ -1,4 +1,6 @@
-﻿namespace CSharp_Problem_Statements
+﻿using System.Text.RegularExpressions;
+
+namespace CSharp_Problem_Statements
 {
     class Program
     {
@@ -69,13 +71,34 @@
                 return "Odd Length";
             }
         }
-        static bool EndsWith (string str)
+        static bool Last_string_Chk (string str)
         {
-            return str.EndsWith("s");
+            int str_len = str.Length;
+            return str.EndsWith("s") && str[str_len - 1] == 's';
         }
         static int Sum_of_Squares_in_Array(int[] arr)
         {
             return arr.Sum(x => x * x);
+        }
+        static string Vowels (string str)
+        {
+            return new Regex(@"[aeiouAEIOU]").Replace(str, "");
+        }
+        static bool Or_Conditions (int x, int y)
+        {
+            // Returning true if any of the conditions are met:
+            // 1. x equals 30
+            // 2. y equals 30
+            // 3. The sum of x and y equals 30
+            return x == 30 || y == 30 || (x + y == 30);
+        }
+        static bool Within_Range (int x)
+        {
+            if (Math.Abs(x - 100) <= 10 || Math.Abs(x - 200) <= 10)
+            {
+                return true;
+            }
+            return false;
         }
         static void Main(string[] args)
         {
@@ -83,19 +106,36 @@
 
 
 
+
+
+            //Returning true if any of the conditions are met:
+            // 1. x equals 30
+            // 2. y equals 30
+            // 3. The sum of x and y equals 30
+            //Console.WriteLine(Or_Conditions(30, 15));
+            //Console.WriteLine(Or_Conditions(15, 15));
+            //Console.WriteLine(Or_Conditions(20, 10));
+
+
+
+            //Removing Vowels
+            //Console.WriteLine("After removing all the vowels from the said string:" + Vowels("JavaScript"));
+
+
+
             //int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             //Console.WriteLine(Sum_of_Squares_in_Array(nums));
 
 
-            //Console.WriteLine(EndsWith("Books"));
+            //Console.WriteLine("Is 'Books' Plural?" + Last_string_Chk("Books"));
 
 
 
             //Console.WriteLine(String_Length_Odd_or_Even("JavaScript"));
-            
-            
-            
-            
+
+
+
+
             //Console.WriteLine(OrderBy("PHP"));
 
 
